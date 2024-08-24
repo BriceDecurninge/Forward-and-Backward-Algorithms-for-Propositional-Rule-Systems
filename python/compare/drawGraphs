@@ -1,0 +1,75 @@
+'''
+Author : Brice Decurninge
+
+Description : This file includes different functions
+enabling to draw graphs of the execution time of Horn SAT solver
+algorithms on different benchmarks
+'''
+
+
+import backwardV3 as backward
+import forwardV2 as forwardQuad
+import forwardV3 as forwardLin
+
+import benchmark1 as b1
+import benchmark2 as b2
+import benchmark3 as b3
+import benchmark4 as b4
+import benchmark5 as b5
+
+import timeit as timeit
+
+'''
+Input : 
+    algorithm (module) : algorithm we want to show (backward
+    forwardQuad or forwardLin)
+    benchmark int: the number of  the benchmark we want to use
+    example : 1 -> data/benchmark1
+    sizes (int List): List of value k (or n) representing different
+    sizes of benchmarks
+    k (int) : value of the second benchmark size parameters
+    repeat (int) : For a specific benchmark, how many time do we want
+    to execute it. It enables to have more accurate measure of time
+    both (bool) : Say if we want to increase k and n at the same time
+Output : Graph representing the execution time according to the size
+         of the benchmark
+'''
+
+path = "/home/ecyrbe/Desktop/Lea code/Logic/compare/data/"
+
+def drawGraph(algorithm, benchmark, sizes, k, repeat, both) :
+    
+    execution_time = []
+
+    for size in sizes :
+        print ("processing with size "+str(size))
+        where = path + "benchmark" + str(benchmark) + "/"
+
+        if both :
+            benchmark.create_benchmark(n=size,k=size)
+        else:
+            benchmark.create_benchmark(n=size,k=k)
+        
+        
+
+def testSet(benchmark) :
+
+    temps_fonction_1 = []
+    temps_fonction_2 = []
+    temps_fonction_3 = []
+
+    
+        
+
+    set = benchmark.create_benchmark(k=2,n=2) #k, benchmark_n, where
+    BR = set[0]["rules"]
+    BF = set[0]["facts base"]
+    Q = set[0]["question"]
+    temps_fonction_1.append(timeit.timeit(lambda : forwardQuad.FordwardAlgorithm2(BF,BR,Q), number = 1))
+    #temps_fonction_2.append(timeit.timeit(lambda :forwardLin.preTreatment3(BR),
+        #forwardLin.FordwardAlgorithm3(BF,BR,Q)),number=1)
+    #temps_fonction_3.append(timeit.timeit(lambda : backward.preTreatment(BR, BF, Q),
+        #backward.OR(Q)),number = 1)
+    print (temps_fonction_1[0])
+
+testSet(b1)

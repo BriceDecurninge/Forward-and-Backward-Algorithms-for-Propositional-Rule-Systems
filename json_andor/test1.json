@@ -1,0 +1,11 @@
+{
+    "base_of_rules": [
+        "A1∧A2=>Q",
+        "A2=>A1",
+        "A1=>A2"
+    ],
+    "base_of_facts": [
+        "A1"
+    ],
+    "question": "Q"
+}
