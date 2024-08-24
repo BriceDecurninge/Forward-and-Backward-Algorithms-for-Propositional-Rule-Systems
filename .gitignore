@@ -1,0 +1,83 @@
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore build directories
+/build/
+/bin/
+/obj/
+/out/
+
+# Ignore CMake build files
+CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+
+# Ignore executable files
+*.exe
+*.out
+*.app
+
+# Ignore compiled object files
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Ignore log files
+*.log
+
+# Ignore debugging files
+*.gch
+*.pch
+*.pdb
+*.idb
+*.ilk
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+*.egg-info/
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Ignore generated documentation
+/docs/doxygen/
+
+# Ignore csv and other data files (optional, adjust as needed)
+*.csv
+*.tsv
+
+# Ignore test output
+/tests/output/
+
+# Ignore coverage reports
+.coverage
+.coverage.*
+.cache/
+.nosetests.xml
+coverage.xml
+*.cover
+*.coveragerc
