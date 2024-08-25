@@ -30,10 +30,10 @@ In rule-based systems, knowledge is often represented in the form of rules (impl
 
 Two primary approaches are implemented to solve this problem:
 
-1. **Forward Algorithm **: 
+1. **Forward Algorithm**: 
    - Starts with the known facts and applies the rules to infer new facts until the question (target variable) is inferred or all possible inferences are made.
    
-2. **Backward Algorithm **:
+2. **Backward Algorithm**:
    - Starts with the question and works backward, trying to establish whether the necessary facts can be deduced from the known facts through the application of the rules.
 
 ### Goals
